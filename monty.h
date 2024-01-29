@@ -60,10 +60,17 @@ int usage_info(void);
 void file_info(const char *filename);
 void malloc_info(void);
 void pint_info(unsigned int line_number);
+void pop_info(unsigned int line_number);
 
 
 /*** push_pall.c ***/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+
+/*** pint.c file ***/
+void pint(stack_t **stack, unsigned int line_number);
+
+/*** pop.c file ***/
+void pop(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */

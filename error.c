@@ -34,3 +34,11 @@ void pint_info(unsigned int line_number)
 	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 	FAILED;
 }
+
+// add description for pop_info
+
+void pop_info(unsigned int line_number)
+{
+	fprintf(stderr, "L%d: can't pop an empty stak\n", line_number);
+	FAILED;
+}
