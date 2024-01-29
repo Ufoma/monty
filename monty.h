@@ -2,6 +2,7 @@
 #define MONTY_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /** Default data structure **/
 
@@ -34,6 +35,10 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/*** error.c file ***/
+int usage_info(void);
+void file_info(const char *filename);
 
 
 #endif /* MONTY_H */
