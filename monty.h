@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 #define FAILED exit(EXIT_FAILURE)
 
@@ -72,5 +74,15 @@ void pint(stack_t **stack, unsigned int line_number);
 
 /*** pop.c file ***/
 void pop(stack_t **stack, unsigned int line_number);
+
+typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
+
+/*** opcode.c file ***/
+instruct_func get_opcode(char *str);
+void opcode_error(unsigned int line_number);
+char *parse_line(char *line, stack_t **stack, unsigned int line_number);
+
+/*** is_int.c file ***/
+int is_integer(char *str);
 
 #endif /* MONTY_H */
