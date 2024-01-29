@@ -19,8 +19,18 @@ void file_info(const char *filename)
 	FAILED;
 }
 
+// add description for malloc_info
+
 void malloc_info(void)
 {
 	fprintf(stderr, "Error: malloc failed\n");
+	FAILED;
+}
+
+// add description for pint_info
+
+void pint_info(unsigned int line_number)
+{
+	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 	FAILED;
 }

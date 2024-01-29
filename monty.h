@@ -59,6 +59,7 @@ extern global_var gv;
 int usage_info(void);
 void file_info(const char *filename);
 void malloc_info(void);
+void pint_info(unsigned int line_number);
 
 
 /*** push_pall.c ***/
