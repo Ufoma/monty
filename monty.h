@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define FAILED exit(EXIT_FAILURE)
+
 /** Default data structure **/
 
 /**
@@ -36,9 +38,31 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global_variable - opcode and its function
+ * @file: the opcode
+ * @push_arg: function to handle the opcode
+ * @buffer: pointer
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct global_variable
+{
+	FILE *file;
+	int push_arg;
+	char *buffer;
+} global_var;
+
+extern global_var gv;
+
 /*** error.c file ***/
 int usage_info(void);
 void file_info(const char *filename);
+void malloc_info(void);
 
+
+/*** push_pall.c ***/
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */

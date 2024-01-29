@@ -1,5 +1,5 @@
-#include "monty.h"
-
+#include "monty.h" 
+global_var gv;
 // fix betty error
 // usage_info - print usage error
 // Return: exit_failure
@@ -8,7 +8,7 @@
 int usage_info(void)
 {
 	fprintf(stderr, "USAGE: monty file\n");
-	exit(EXIT_FAILURE);
+	FAILED;
 }
 
 // add description for file_info function
@@ -16,5 +16,11 @@ int usage_info(void)
 void file_info(const char *filename)
 {
 	fprintf(stderr, "can't open file %s\n", filename);
-	exit(EXIT_FAILURE);
+	FAILED;
+}
+
+void malloc_info(void)
+{
+	fprintf(stderr, "Error: malloc failed\n");
+	FAILED;
 }
