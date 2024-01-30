@@ -64,7 +64,6 @@ void malloc_info(void);
 void pint_info(unsigned int line_number);
 void pop_info(unsigned int line_number);
 
-
 /*** push_pall.c ***/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
@@ -84,5 +83,15 @@ char *parse_line(char *line, stack_t **stack, unsigned int line_number);
 
 /*** is_int.c file ***/
 int is_integer(char *str);
+
+/*** read_file.c ***/
+void readFile(char *filename, stack_t **stack);
+
+/*** free.c file ***/
+void free_int(stack_t *head);
+
+/*** error2.c file ***/
+void unknown_error(unsigned int c, char *line);
+
 
 #endif /* MONTY_H */

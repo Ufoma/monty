@@ -9,22 +9,16 @@
 
 int main(int argc, char *argv[])
 {
-	FILE *file;
-	char *filename = argv[2];
+	stack_t *stack;
 
+	stack = NULL;
 	if (argc != 2)
 	{
 		usage_info();
 	}
 
-	filename = argv[1];
-	file = fopen(filename, "r");
-	if (file == NULL)
-	{
-		file_info(filename);
-	}
-
-	fclose(file);
+	readFile(argv[1], &stack);
+	free_int(stack);
 
 	return (0);
 }
