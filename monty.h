@@ -106,4 +106,8 @@ void mul(stack_t **stack, unsigned int line_number);
 /*** nop.c file ***/
 void nop(stack_t **stack, unsigned int line_number);
 
+/*** pascii.c file ***/
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+
 #endif /* MONTY_H */
