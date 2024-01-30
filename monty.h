@@ -94,8 +94,14 @@ void free_int(stack_t *head);
 void unknown_error(unsigned int c, char *line);
 void swap_error(unsigned int line_number);
 
+
 /*** swap.c file ***/
 void swap(stack_t **stack, unsigned int line_number);
+
+/*** allMathFunc.c file ***/
+void addsub(stack_t **stack, unsigned int line_number);
+void divmod(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
