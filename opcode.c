@@ -10,6 +10,7 @@ instruct_func get_opcode(char *str)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL},
 	};
 	for (i = 0; instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0; i++)

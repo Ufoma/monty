@@ -92,6 +92,10 @@ void free_int(stack_t *head);
 
 /*** error2.c file ***/
 void unknown_error(unsigned int c, char *line);
+void swap_error(unsigned int line_number);
+
+/*** swap.c file ***/
+void swap(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
