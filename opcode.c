@@ -16,6 +16,9 @@ instruct_func get_opcode(char *str)
 		{"div", divmod},
 		{"mod", divmod},
 		{"mul", mul},
+		{"nop", nop},
+		{"pchar", pchar},
+		{"pstr", pstr},
 		{NULL, NULL},
 	};
 	for (i = 0; instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0; i++)
