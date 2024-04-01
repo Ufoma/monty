@@ -1,6 +1,13 @@
 #include "monty.h"
 
-//add description
+/**
+ * addsub - Adds or subtracts the top two elements of the stack.
+ * @stack: A pointer to the stack.
+ * @line_number: The line number of the instruction being executed.
+ *
+ * Description:
+ * This function adds or subtracts the top two elements of the stack,
+ */
 
 void addsub(stack_t **stack, unsigned int line_number)
 {
@@ -36,7 +43,13 @@ void addsub(stack_t **stack, unsigned int line_number)
 	(*stack)->n = result;
 }
 
-// add description
+/**
+ * divmod - divides or performs modulo operation on the top 2 stack elements
+ * @stack: a pointer to the stack
+ * @line_number: the line being executed upon.
+ *
+ * Description: the function prints an error if stack is empty or contains only one number
+ */
 
 void divmod(stack_t **stack, unsigned int line_number)
 {
@@ -73,7 +86,14 @@ void divmod(stack_t **stack, unsigned int line_number)
 }
 
 
-// add description
+/**
+ * mul - multiplies two elements on top of the stack
+ * @stack: A pointer to the stack
+ * @line_number: the line execuyted upon
+ *
+ * Description: It prints an error message if the stack is empty
+ * or contains only one element
+ */
 
 void mul(stack_t **stack, unsigned int line_number)
 {
