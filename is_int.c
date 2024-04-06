@@ -1,5 +1,10 @@
 #include "monty.h"
-// add description here
+/**
+ * is_integer - Checks if a string represents a valid integer
+ * @str: The string to be checked
+ *
+ * Return: returns 1 if integer is valid; 0 otherwise.
+ */
 
 int is_integer(char *str)
 {
