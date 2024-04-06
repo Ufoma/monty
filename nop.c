@@ -1,5 +1,5 @@
 #include "monty.h"
-/*
+/**
  * nop - nop doesn't do anything
  * @stack: pointer to the stack
  * @line_number: line number where the opcode occurs
