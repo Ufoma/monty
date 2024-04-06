@@ -1,9 +1,10 @@
-#include "monty.h" 
-global_var gv;
-// fix betty error
-// usage_info - print usage error
-// Return: exit_failure
+#include "monty.h"
 
+/**
+* usage_info - print usage error
+*
+* Return: Returns EXIT_FAILURE
+*/
 
 int usage_info(void)
 {
@@ -11,7 +12,10 @@ int usage_info(void)
 	FAILED;
 }
 
-// add description for file_info function
+/**
+ * file_info - Prints file opening error message
+ * @filename: the name of the file that refused to open
+ */
 
 void file_info(const char *filename)
 {
@@ -19,7 +23,12 @@ void file_info(const char *filename)
 	FAILED;
 }
 
-// add description for malloc_info
+/**
+ * malloc_info - Prints malloc error message
+ *
+ * Description: Prints an error message when malloc fails to allocate memory
+ * and then exits with EXIT_FAILURE
+ */
 
 void malloc_info(void)
 {
@@ -27,7 +36,10 @@ void malloc_info(void)
 	FAILED;
 }
 
-// add description for pint_info
+/**
+ * pint_info - Prints info error message for pint
+ * @line_number: Line number where error occurred
+ */
 
 void pint_info(unsigned int line_number)
 {
@@ -35,7 +47,10 @@ void pint_info(unsigned int line_number)
 	FAILED;
 }
 
-// add description for pop_info
+/**
+ * pop_info - Prints info error message for pop
+ * @line_number: Line number where error occurred
+ */
 
 void pop_info(unsigned int line_number)
 {
