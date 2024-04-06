@@ -48,14 +48,14 @@ void addsub(stack_t **stack, unsigned int line_number)
  * @stack: a pointer to the stack
  * @line_number: the line being executed upon.
  *
- * Description: the function prints an error if stack is empty or contains only one number
+ * Description: the function prints an error if stack is less than 2
  */
 
 void divmod(stack_t **stack, unsigned int line_number)
 {
 	int divisor = 0;
-	int is_mod = 0; 
-  
+	int is_mod = 0;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't perform operation, stack too short\n",
