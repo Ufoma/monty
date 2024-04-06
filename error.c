@@ -1,5 +1,5 @@
 #include "monty.h"
-
+global_var gv;
 /**
 * usage_info - print usage error
 *
