@@ -1,6 +1,10 @@
 #include "monty.h"
 
-// add description
+/**
+ * readFile - Reads a monty file script and executes its instructions
+ * @filename: name of the monty file
+ * @stack: Pointer to the stack
+ */
 
 
 void readFile(char *filename, stack_t **stack)
@@ -26,7 +30,7 @@ void readFile(char *filename, stack_t **stack)
 		)
 	{
 		line = parse_line(gv.buffer, stack, c);
-		
+
 		if (line == NULL || line[0] == '#')
 		{
 			continue;
