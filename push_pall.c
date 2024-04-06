@@ -1,6 +1,10 @@
 #include "monty.h"
 
-// add description here
+/**
+ * push - pushes an element onto the stack
+ * @stack: Pointer to the stack
+ * @line_number: Line number to the instruction to be executed
+ */
 
 void push(stack_t **stack, unsigned int line_number)
 {
@@ -24,15 +28,21 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 
-// add discription here
+/**
+ * pall - prints all the element of the stack
+ * @stack: pointer to the stack
+ * @line_number: Line number of the instruction to be executed
+ */
+
 void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current;
 	(void)line_number;
 
-	/* sets the current pointer to point to the same location
-	 * as the pointer stack 
-	 * */
+	/**
+	 * sets the current pointer to point to the same location
+	 * as the pointer stack
+	 */
 	current = *stack;
 	for (current = *stack; current; current = current->next)
 	{
