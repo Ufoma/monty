@@ -1,6 +1,11 @@
 #include "monty.h"
 
-// add your description here
+/**
+ * get_opcode - Gets the function relating to an opcode
+ * @str: the opcode
+ *
+ * Return: The function pointer or NULL if not found
+ */
 
 instruct_func get_opcode(char *str)
 {
@@ -23,19 +28,31 @@ instruct_func get_opcode(char *str)
 		{"rotr", rotr},
 		{NULL, NULL},
 	};
-	for (i = 0; instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0; i++)
+	for (i = 0; instruct[i].f != NULL && strcmp(instruct[i].opcode, str)
+			!= 0; i++)
 		;
 	return (instruct[i].f);
 }
 
-// add your description here
+/**
+ * opcode_error - Prints usage error for opcode "push".
+ * @line_number: The line number where the error occurred.
+ */
 
 void opcode_error(unsigned int line_number)
 {
 	fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	exit(EXIT_FAILURE);
 }
-// add your description here
+
+/**
+ * parse_line - Parses a line from the Monty script
+ * @line: The line to be parsed
+ * @stack: A pointer to the stack
+ * @line_number: the line number of the instruction being executed
+ *
+ * Return: The opcode string
+ */
 
 char *parse_line(char *line, stack_t **stack, unsigned int line_number)
 {
