@@ -1,6 +1,10 @@
 #include "monty.h"
 
-// add description here
+/**
+ * pint - Prints the value at the top of the stack
+ * @stack: the pointer
+ * @line_number: Line number of the instruction to be executed
+ */
 
 void pint(stack_t **stack, unsigned int line_number)
 {

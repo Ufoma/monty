@@ -1,5 +1,9 @@
 #include "monty.h"
-// add description here
+/**
+ * pop - removes the top element of the stack
+ * @stack: Pointer to the stack
+ * @line_number: Line number
+ */
 
 void pop(stack_t **stack, unsigned int line_number)
 {
